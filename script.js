@@ -1,0 +1,24 @@
+// Welcome message
+console.log("Welcome to my Portfolio!");
+
+// Scroll animation
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                                }
+                                    });
+                                    }, {
+                                        threshold: 0.1
+                                        });
+
+                                        sections.forEach(section => {
+                                            observer.observe(section);
+                                            });
+
+                                            // Contact button message
+                                            function contactMe() {
+                                                alert("Thank you for your interest! Let's work together.");
+                                                }
